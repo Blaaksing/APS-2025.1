@@ -1,23 +1,34 @@
 
 <h1>Casos de uso</h1>
 
-- Cadastrar Usuário
-- Login
-- Trocar Credenciais
-- Buscar Professor
-- Buscar Componente Curricular
-- Solicitar Professor de Monitoria
-- Solicitar Professor Orientador de Estágio
-- Solicitar Professor Orientador de TCC
-- Enviar Documentos
-- Receber Documentos
-- Cadastrar Estágio
-- Baixar documentos para estágio
-- Baixar documentos para monitoria
-- Baixar documentos para TCC
-- Acompanhar Orientações TCC
-- Acompanhar Orientações Monitoria
-- Acompanhar Orientações Estágio
-- Ofertar Orientação
-- Acompanhar status
-- Acessar 'meu perfil'
+- Cadastrar Usuário (pessoa não cadastrada no sistema)
+- Login (Usuário)
+- Trocar Credenciais (Todos os atores cadastrados)
+- Buscar Professor (Todos os atores cadastrados)
+- Buscar Componente Curricular (Aluno)
+- Solicitar Professor de Monitoria (Aluno)
+- Solicitar Professor Orientador de Estágio (Aluno)
+- Solicitar Professor Orientador de TCC (Aluno)
+- Enviar Documentos Monitoria (Monitor)
+- Enviar Documentos TCC (Autor de TCC)
+- Enviar Documentos Estágio (Estagiário)
+- Receber Documentos (Aluno, Professor, Monitor, Autor de TCC, Estagiário)
+- Enviar Documentos Institucionais (Professor, Coordenador de Monitoria e Coordenador de Estágio)
+- Solicitar Declaração de Participação Monitoria (Aluno)
+- Solicitar Declaração de Participação Estágio (Aluno)
+- Solicitar Declaração de Conclusão de Curso (Aluno)
+- Consultar Histórico de Atividades (Todos os atores cadastrados)
+- Cadastrar Estágio (Aluno)
+- Baixar documentos acadêmicos (Todos os atores do sistema)
+- Acompanhar Orientações TCC (Professor)
+- Acompanhar Orientações Monitoria (Professor)
+- Acompanhar Orientações Estágio (Professor)
+- Avaliar Relatório Final de Monitoria (Professor e Coordenador de Monitoria)
+- Avaliar Relatório Final de Estágio (Professor e Coordenador de Estágio)
+- Avaliar TCC (Professor)
+- Avaliar Pedidos de Estágio (Coordenador de Estágio)
+- Ofertar Orientação (Professor)
+- Cadastrar Edital de Monitoria (Coordenador de Monitoria)
+- Acompanhar status estágio (Aluno, Coordenador de Estágio)
+- Acompanhar status monitoria (Aluno, Coordenador de Monitoria)
+- Consultar 'meu perfil' (Todos os atores cadastrados)
