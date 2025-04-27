@@ -1,34 +1,34 @@
+# Casos de uso
 
-<h1>Casos de uso</h1>
-
-- Cadastrar Usuário (pessoa não cadastrada no sistema)
-- Login (Usuário)
-- Trocar Credenciais (Todos os atores cadastrados)
-- Buscar Professor (Todos os atores cadastrados)
-- Buscar Componente Curricular (Aluno)
-- Solicitar Professor de Monitoria (Aluno)
-- Solicitar Professor Orientador de Estágio (Aluno)
-- Solicitar Professor Orientador de TCC (Aluno)
-- Enviar Documentos Monitoria (Monitor)
-- Enviar Documentos TCC (Autor de TCC)
-- Enviar Documentos Estágio (Estagiário)
-- Receber Documentos (Aluno, Professor, Monitor, Autor de TCC, Estagiário)
-- Enviar Documentos Institucionais (Professor, Coordenador de Monitoria e Coordenador de Estágio)
-- Solicitar Declaração de Participação Monitoria (Aluno)
-- Solicitar Declaração de Participação Estágio (Aluno)
-- Solicitar Declaração de Conclusão de Curso (Aluno)
-- Consultar Histórico de Atividades (Todos os atores cadastrados)
-- Cadastrar Estágio (Aluno)
-- Baixar documentos acadêmicos (Todos os atores do sistema)
-- Acompanhar Orientações TCC (Professor)
-- Acompanhar Orientações Monitoria (Professor)
-- Acompanhar Orientações Estágio (Professor)
-- Avaliar Relatório Final de Monitoria (Professor e Coordenador de Monitoria)
-- Avaliar Relatório Final de Estágio (Professor e Coordenador de Estágio)
-- Avaliar TCC (Professor)
-- Avaliar Pedidos de Estágio (Coordenador de Estágio)
-- Ofertar Orientação (Professor)
-- Cadastrar Edital de Monitoria (Coordenador de Monitoria)
-- Acompanhar status estágio (Aluno, Coordenador de Estágio)
-- Acompanhar status monitoria (Aluno, Coordenador de Monitoria)
-- Consultar 'meu perfil' (Todos os atores cadastrados)
+1. Cadastrar Usuário
+2. Login
+3. Trocar Senha
+4. Trocar Credenciais
+5. Buscar Professor
+6. Buscar Componente Curricular
+7. Solicitar Professor de Monitoria
+8. Solicitar Professor Orientador de Estágio
+9. Solicitar Professor Orientador de TCC
+10. Enviar Documentos Monitoria (Monitor)
+11. Enviar Documentos TCC (Autor de TCC)
+12. Enviar Documentos Estágio (Estagiário) 
+13. Receber Documentos (Aluno, Professor, Monitor, Autor de TCC, Estagiário)
+14. Enviar Documentos Institucionais (Professor, Coordenador de Monitoria e Coordenador de Estágio)
+15. Solicitar Declaração de Participação Monitoria (Aluno)
+16. Solicitar Declaração de Participação Estágio (Aluno)
+17. Solicitar Declaração de Conclusão de Curso (Aluno)
+18. Consultar Histórico de Atividades (Todos os atores cadastrados)
+19. Cadastrar Estágio (Aluno)
+20. Baixar documentos acadêmicos (Todos os atores do sistema)
+21. Acompanhar Orientações TCC (Professor) 
+22. Acompanhar Orientações Monitoria (Professor)
+23. Acompanhar Orientações Estágio (Professor)
+24. Avaliar Relatório Final de Monitoria (Professor e Coordenador de Monitoria)
+25. Avaliar Relatório Final de Estágio (Professor e Coordenador de Estágio)
+26. Avaliar TCC (Professor)
+27. Avaliar Pedidos de Estágio (Coordenador de Estágio)
+28. Ofertar Orientação (Professor)
+29. Cadastrar Edital de Monitoria (Coordenador de Monitoria)
+30. Acompanhar status estágio (Aluno, Coordenador de Estágio)
+31. Acompanhar status monitoria (Aluno, Coordenador de Monitoria)
+32. Consultar 'meu perfil' (Todos os atores cadastrados)
