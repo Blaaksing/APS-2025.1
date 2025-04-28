@@ -631,7 +631,258 @@ O usuário acessa o sistema para visualizar todo o histórico de suas atividades
 
 - O usuário consulta seu histórico completo.
 
+- 
+
 ### Fluxo de Exceção:
 
 - Se não houver atividades registradas, o sistema informa o usuário.
+
+## UC19. Cadastrar Estágio
+
+### Cenário Informal:
+O caso começa quando um aluno precisa registrar um novo estágio no sistema para validação institucional.
+
+### Atores
+- Aluno
+
+### Pré-condições
+- Ter completado 50% da carga horária do curso
+- Não ter estágios ativos em paralelo
+
+### Fluxo de Eventos (caminho básico)
+1. Acessa "Estágios > Novo Cadastro"
+2. Preenche formulário com:
+   - Dados da empresa (CNPJ válido)
+   - Plano de atividades
+   - Período previsto
+3. Anexa documentação comprobatória
+4. Submete para análise
+5. O sistema envia para aprovação do coordenador
+
+### Pós-condições
+- Estágio aparece como "Pendente de Aprovação"
+- Aluno recebe confirmação de recebimento
+
+### Fluxo de Exceção
+- No passo 2, se CNPJ for inválido, o sistema bloqueia envio
+- No passo 3, se faltar documento obrigatório, o sistema lista itens faltantes
+
+## UC20. Baixar Documentos Acadêmicos
+
+### Cenário Informal:
+O caso começa quando qualquer usuário autenticado precisa baixar documentos oficiais disponíveis no sistema.
+
+### Atores
+- Todos os usuários do sistema
+
+### Pré-condições
+- Ter permissão de acesso ao documento
+
+### Fluxo de Eventos (caminho básico)
+1. O usuário acessa "Documentos"
+2. Seleciona categoria desejada:
+   - Modelos
+   - Editais
+   - Documentos Pessoais
+3. Aplica filtros de busca
+4. Seleciona documento
+5. Clica em "Download"
+6. O sistema registra o acesso
+
+### Pós-condições
+- Documento salvo localmente
+- Registro de download no sistema
+
+### Fluxo de Exceção
+- No passo 4, se o documento estiver restrito, o sistema solicita justificativa de acesso
+- No passo 5, se o arquivo estiver corrompido, o sistema gera novo link de download
+
+## UC24. Avaliar Relatório Final de Monitoria
+
+### Cenário Informal:
+O caso começa quando um professor ou coordenador recebe um relatório final de monitoria para avaliação. O sistema fornece instrumentos de avaliação padronizados.
+
+### Atores
+- Professor
+- Coordenador de Monitoria
+
+### Pré-condições
+- Ter recebido relatório final para avaliação
+- Estar dentro do prazo de avaliação
+
+### Fluxo de Eventos (caminho básico)
+1. O avaliador acessa "Avaliações > Monitoria"
+2. O sistema exibe relatórios pendentes
+3. Seleciona o relatório a avaliar
+4. Preenche formulário de avaliação com:
+   - Notas por critério
+   - Comentários específicos
+   - Recomendações
+5. Submete a avaliação
+6. O sistema registra e notifica o monitor
+
+### Pós-condições
+- O resultado da avaliação é vinculado ao histórico do monitor
+- O status da monitoria é atualizado
+
+### Fluxo de Exceção
+- No passo 4, se o relatório for insuficiente, o sistema permite solicitar revisão
+- No passo 5, se ultrapassar o prazo, o sistema notifica a coordenação
+
+## UC25. Avaliar Relatório Final de Estágio
+
+### Cenário Informal:
+O caso começa quando um professor ou coordenador precisa avaliar um relatório final de estágio. O sistema oferece checklist completo dos requisitos.
+
+### Atores
+- Professor
+- Coordenador de Estágio
+
+### Pré-condições
+- Relatório final submetido pelo estagiário
+- Documentação complementar completa
+
+### Fluxo de Eventos (caminho básico)
+1. O avaliador acessa "Avaliações > Estágio"
+2. O sistema lista relatórios recebidos
+3. Seleciona relatório específico
+4. Analisa documento anexo
+5. Verifica conformidade com:
+   - Formatação padrão
+   - Conteúdo mínimo obrigatório
+   - Assinaturas digitais
+6. Registra avaliação no sistema
+7. O sistema atualiza o status do estágio
+
+### Pós-condições
+- O resultado é comunicado ao estagiário e empresa conveniada
+- O histórico acadêmico é atualizado
+
+### Fluxo de Exceção
+- No passo 5, se faltar item obrigatório, o sistema gera termo de devolução
+- No passo 6, se houver inconsistência grave, o sistema alerta a comissão de estágios
+
+## UC26. Avaliar TCC
+
+### Cenário Informal:
+O caso começa quando um professor orientador recebe um Trabalho de Conclusão de Curso submetido por seu orientando para avaliação final. O sistema disponibiliza ferramentas para análise completa do trabalho.
+
+### Atores
+- Professor (Orientador)
+
+### Pré-condições
+- Ter vínculo ativo como orientador do TCC
+- O trabalho deve estar na fase final de avaliação
+- Todos os capítulos devem ter sido aprovados nas etapas anteriores
+
+### Fluxo de Eventos (caminho básico)
+1. O professor recebe notificação do sistema sobre TCC pronto para avaliação
+2. Acessa a área "Avaliação de TCC"
+3. O sistema exibe:
+   - Versão completa do trabalho
+   - Histórico de entregas anteriores
+   - Pareceres dos co-orientadores (se aplicável)
+4. Realiza avaliação utilizando o formulário padronizado:
+   - Nota por critério (conteúdo, formatação, originalidade)
+   - Comentários específicos por capítulo
+   - Recomendações para publicação
+5. Submete a avaliação completa
+6. O sistema registra o resultado e notifica:
+   - O aluno autor
+   - A banca examinadora
+   - A coordenação do curso
+
+### Pós-condições
+- O TCC recebe status "Aprovado" ou "Reprovado"
+- O resultado final é registrado no histórico acadêmico
+- Geração automática da ata de defesa (para TCCs aprovados)
+
+### Fluxo de Exceção
+- No passo 4, se o trabalho for reprovado:
+  - O sistema gera termo de correções
+  - Estabelece novo prazo para reapresentação
+  - Notifica a coordenação sobre a reprovação
+- No passo 5, se houver divergência entre orientador e co-orientador:
+  - O sistema encaminha para comitê avaliador
+  - Suspende o prazo de avaliação
+
+
+## UC27. Avaliar Pedidos de Estágio
+
+### Cenário Informal:
+O caso começa quando o coordenador de estágio precisa analisar e aprovar novas solicitações de estágio dos alunos.
+
+### Atores
+- Coordenador de Estágio
+
+### Pré-condições
+- Ter solicitações pendentes no sistema
+- Estar dentro do período letivo válido
+
+### Fluxo de Eventos (caminho básico)
+1. O coordenador acessa "Estágios > Solicitações"
+2. O sistema lista pedidos pendentes
+3. Seleciona um pedido específico
+4. Analisa:
+   - Documentação da empresa
+   - Plano de atividades
+   - Adequação ao curso
+5. Aprova ou reprova com justificativa
+6. O sistema notifica o aluno e orientador
+
+### Pós-condições
+- O estágio aparece como "Aprovado" ou "Reprovado"
+- O sistema gera termo de aceite quando aplicável
+
+### Fluxo de Exceção
+- No passo 4, se a empresa não for conveniada, o sistema inicia fluxo de conveniamento
+- No passo 5, se reprovado, o sistema sugere alternativas ao aluno
+
+# UC29. Cadastrar Edital de Monitoria
+
+### Cenário Informal:
+O caso começa quando o Coordenador de Monitoria precisa criar um novo edital para seleção de monitores. O sistema oferece formulário padronizado com todos os elementos obrigatórios.
+
+### Atores
+- Coordenador de Monitoria
+
+### Pré-condições
+- Ter permissão de coordenação ativa
+- Estar no período de planejamento acadêmico
+- Ter as disciplinas elegíveis definidas
+
+### Fluxo de Eventos (caminho básico)
+1. O coordenador acessa "Editais > Novo Edital"
+2. O sistema exibe formulário com:
+   - Campos obrigatórios (número, período vigente)
+   - Disciplinas disponíveis
+   - Modelos pré-aprovados
+3. Preenche os dados do edital:
+   - Vagas por disciplina
+   - Requisitos acadêmicos
+   - Cronograma completo
+   - Documentos necessários
+4. Anexa documentos complementares
+5. O sistema valida a completude das informações
+6. Publica o edital no sistema
+7. Dispara notificações para:
+   - Alunos elegíveis
+   - Professores responsáveis
+   - Secretaria acadêmica
+
+### Pós-condições
+- O edital fica disponível no mural oficial
+- Geração automática da página de inscrições
+- Criação de processos seletivos associados
+
+### Fluxo de Exceção
+- No passo 3, se houver conflito com editais anteriores:
+  - O sistema alerta sobre sobreposições
+  - Sugere ajustes nas datas
+- No passo 5, se faltar informação essencial:
+  - O sistema destaca os campos incompletos
+  - Impede a publicação até a correção
+- No passo 6, se publicar fora do período ideal:
+  - O sistema requer justificativa formal
+  - Notifica a diretoria acadêmica
 
