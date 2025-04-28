@@ -104,11 +104,7 @@ O caso começa quando um usuário não autenticado deseja alterar sua senha. O s
 
 ### Atores
 
-- Aluno.
-- Monitor.
-- Estagiário.
-- Autor de TCC.
-- Professor.
+- Usuário Anônimo
 
 ### Pré-condições
 
