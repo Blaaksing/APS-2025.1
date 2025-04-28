@@ -72,13 +72,7 @@ O caso começa quando um usuário com cadastro ativo acessa a página de login d
 
 ### Atores
 
-- Aluno.
-- Monitor.
-- Estagiário.
-- Autor de TCC.
-- Professor.
-- Coordenador de Monitorias.
-- Coordenador de Estágio.
+- Usuário Anônimo.
 
 ### Pré-condições
 
