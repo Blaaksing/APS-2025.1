@@ -627,8 +627,6 @@ O usuário acessa o sistema para visualizar todo o histórico de suas atividades
 
 - O usuário consulta seu histórico completo.
 
-- 
-
 ### Fluxo de Exceção:
 
 - Se não houver atividades registradas, o sistema informa o usuário.
@@ -692,6 +690,99 @@ O caso começa quando qualquer usuário autenticado precisa baixar documentos of
 ### Fluxo de Exceção
 - No passo 4, se o documento estiver restrito, o sistema solicita justificativa de acesso
 - No passo 5, se o arquivo estiver corrompido, o sistema gera novo link de download
+
+## UC21. Acompanhar Orientações de TCC
+
+### Cenário Informal:
+O caso começa quando um professor orientador deseja acompanhar o progresso dos seus orientandos de TCC.
+
+### Atores
+- Professor
+
+### Pré-condições
+- Ter pelo menos um orientando ativo
+
+### Fluxo de Eventos (caminho básico)
+1. Acessa "Orientações > TCC"
+2. O sistema lista todos os orientandos
+3. Seleciona um orientando
+4. Visualiza:
+   - Entregas realizadas
+   - Prazos
+   - Histórico de feedbacks
+5. Registra novas observações
+
+### Pós-condições
+- Observações ficam disponíveis para o aluno
+- Sistema atualiza status do TCC
+
+### Fluxo de Exceção
+- No passo 2, se não houver orientandos, o sistema sugere cadastro de disponibilidade
+- No passo 4, se houver atrasos, o sistema destaca em vermelho
+
+## UC22. Acompanhar Orientações de Monitoria
+
+### Cenário Informal:
+O caso começa quando um professor responsável deseja acompanhar o desempenho dos monitores sob sua supervisão. O sistema consolida todas as informações relevantes em um painel único.
+
+### Atores
+- Professor
+
+### Pré-condições
+- Ter sido designado como professor responsável por monitoria
+- Ter pelo menos um monitor ativo
+
+### Fluxo de Eventos (caminho básico)
+1. O professor acessa "Monitorias > Acompanhamento"
+2. O sistema exibe lista de monitores vinculados
+3. Seleciona um monitor específico
+4. Visualiza:
+   - Horas cumpridas
+   - Relatórios entregues
+   - Avaliações anteriores
+   - Próximos prazos
+5. Registra feedback ou orientações
+6. O sistema notifica o monitor sobre as observações
+
+### Pós-condições
+- O registro de acompanhamento é armazenado
+- O histórico da monitoria é atualizado
+
+### Fluxo de Exceção
+- No passo 2, se não houver monitores ativos, o sistema sugere convocação de novos monitores
+- No passo 4, se houver atrasos críticos, o sistema alerta o coordenador automaticamente
+
+## UC23. Acompanhar Orientações de Estágio
+
+### Cenário Informal:
+O caso começa quando um professor orientador precisa acompanhar o progresso dos estágios supervisionados sob sua responsabilidade.
+
+### Atores
+- Professor
+
+### Pré-condições
+- Ter sido designado como orientador de estágio
+- Ter pelo menos um estagiário ativo
+
+### Fluxo de Eventos (caminho básico)
+1. O professor acessa "Estágios > Orientação"
+2. O sistema lista todos os estagiários vinculados
+3. Seleciona um estagiário específico
+4. Visualiza:
+   - Plano de atividades
+   - Relatórios entregues
+   - Avaliações da empresa
+   - Cumprimento de carga horária
+5. Preenche avaliação parcial ou final
+6. O sistema atualiza o status do estágio
+
+### Pós-condições
+- A avaliação fica disponível para o estagiário e coordenador
+- O sistema calcula automaticamente o progresso total
+
+### Fluxo de Exceção
+- No passo 4, se detectar divergência na carga horária, o sistema sugere auditoria
+- No passo 5, se a avaliação for negativa, o sistema gera plano de correção automático
 
 ## UC24. Avaliar Relatório Final de Monitoria
 
@@ -802,7 +893,6 @@ O caso começa quando um professor orientador recebe um Trabalho de Conclusão d
   - O sistema encaminha para comitê avaliador
   - Suspende o prazo de avaliação
 
-
 ## UC27. Avaliar Pedidos de Estágio
 
 ### Cenário Informal:
@@ -833,6 +923,37 @@ O caso começa quando o coordenador de estágio precisa analisar e aprovar novas
 ### Fluxo de Exceção
 - No passo 4, se a empresa não for conveniada, o sistema inicia fluxo de conveniamento
 - No passo 5, se reprovado, o sistema sugere alternativas ao aluno
+
+## UC28. Ofertar Orientação
+
+### Cenário Informal:
+O caso começa quando um professor deseja disponibilizar vagas para orientação de TCC ou estágios. O sistema publica a disponibilidade para os alunos interessados.
+
+### Atores
+- Professor
+
+### Pré-condições
+- Ter cadastro ativo como orientador
+- Não ter atingido o limite máximo de orientandos
+
+### Fluxo de Eventos (caminho básico)
+1. O professor acessa "Orientações > Ofertar"
+2. Seleciona tipo (TCC ou Estágio)
+3. Define:
+   - Áreas de interesse
+   - Vagas disponíveis
+   - Requisitos mínimos
+   - Período de disponibilidade
+4. Publica a oferta
+5. O sistema lista na vitrine de orientações
+
+### Pós-condições
+- A oferta fica visível para alunos qualificados
+- O professor recebe solicitações via sistema
+
+### Fluxo de Exceção
+- No passo 3, se exceder carga horária máxima, o sistema ajusta automaticamente
+- No passo 4, se conflitar com período sabático, o sistema bloqueia publicação
 
 # UC29. Cadastrar Edital de Monitoria
 
@@ -882,3 +1003,32 @@ O caso começa quando o Coordenador de Monitoria precisa criar um novo edital pa
   - O sistema requer justificativa formal
   - Notifica a diretoria acadêmica
 
+## UC31. Acompanhar Status de Monitoria
+
+### Cenário Informal:
+O caso começa quando um aluno ou coordenador deseja verificar o andamento atual das atividades de monitoria.
+
+### Atores
+- Aluno (Monitor)
+- Coordenador de Monitoria
+
+### Pré-condições
+- Ter monitoria ativa no sistema
+
+### Fluxo de Eventos (caminho básico)
+1. O usuário acessa "Monitoria > Andamento"
+2. O sistema exibe:
+   - Progresso atual
+   - Próximas entregas
+   - Pendências
+   - Histórico de avaliações
+3. Seleciona item específico para detalhes
+4. O sistema mostra relatório completo
+
+### Pós-condições
+- Registro de consulta no histórico
+- Atualização de alertas e notificações
+
+### Fluxo de Exceção
+- No passo 2, se houver irregularidades, o sistema destaca em vermelho
+- No passo 3, se o monitor estiver inativo, o sistema sugere substituição
