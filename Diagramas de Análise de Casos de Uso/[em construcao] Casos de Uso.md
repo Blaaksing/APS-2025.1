@@ -185,7 +185,6 @@ O caso começa quando um usuário autenticado deseja buscar informações sobre 
 - Monitor.
 - Estagiário.
 - Autor de TCC.
-- Professor.
 - Coordenador de Monitorias.
 - Coodenador de Estágio.
 
