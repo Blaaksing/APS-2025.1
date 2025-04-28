@@ -1002,6 +1002,42 @@ O caso começa quando o Coordenador de Monitoria precisa criar um novo edital pa
   - O sistema requer justificativa formal
   - Notifica a diretoria acadêmica
 
+## UC30. Acompanhar Status de Estágio
+
+### Cenário Informal:
+O caso começa quando um aluno estagiário ou coordenador de estágio acessa o sistema para verificar o andamento das atividades de estágio, incluindo progresso, pendências e avaliações.  
+
+### Atores
+- Aluno (Estagiário)  
+- Coordenador de Estágio  
+
+### Pré-condições
+- O estágio deve estar cadastrado e aprovado no sistema.  
+- O usuário deve ter permissões de acesso (aluno vinculado ao estágio ou coordenador responsável).  
+
+### Fluxo de Eventos (caminho básico)
+1. O usuário acessa a seção "Estágios > Acompanhamento".  
+2. O sistema exibe:  
+   - Progresso atual (horas cumpridas/total).  
+   - Relatórios entregues e seus status.  
+   - Avaliações do orientador e da empresa (se aplicável).  
+   - Próximos prazos importantes.  
+3. O usuário seleciona "Detalhes" para uma visão ampliada.  
+4. O sistema mostra:  
+   - Feedback detalhado do orientador.  
+   - Histórico completo de atividades.  
+   - Documentos vinculados.  
+
+### Pós-condições
+- O usuário tem uma visão clara do status atual do estágio.  
+- O sistema registra a consulta no histórico de acesso.  
+
+### Fluxo de Exceção
+- No passo 2, se o estágio não estiver cadastrado:  
+  O sistema exibe: "Nenhum estágio vinculado. Cadastre um estágio primeiro."
+- No passo 4, se houver dados inconsistentes:  
+  O sistema notifica a coordenação para verificação manual.
+
 ## UC31. Acompanhar Status de Monitoria
 
 ### Cenário Informal:
@@ -1031,3 +1067,43 @@ O caso começa quando um aluno ou coordenador deseja verificar o andamento atual
 ### Fluxo de Exceção
 - No passo 2, se houver irregularidades, o sistema destaca em vermelho
 - No passo 3, se o monitor estiver inativo, o sistema sugere substituição
+
+## UC32. Consultar 'Meu Perfil'
+
+### Cenário Informal:
+O caso começa quando qualquer usuário autenticado acessa o sistema para visualizar suas informações pessoais, acadêmicas e atividades vinculadas.  
+
+### Atores 
+- Aluno  
+- Monitor  
+- Estagiário  
+- Autor de TCC  
+- Professor  
+- Coordenador de Monitoria  
+- Coordenador de Estágio  
+
+### Pré-condições
+- O usuário deve estar autenticado no sistema.  
+
+### Fluxo de Eventos (caminho básico)
+1. O usuário clica em "Meu Perfil" no menu principal.  
+2. O sistema exibe as seguintes seções:  
+   - Dados Pessoais: Nome, CPF, e-mail institucional.  
+   - Informações Acadêmicas: Curso, matrícula, período (para alunos) ou departamento (para docentes).  
+   - Atividades Vinculadas:
+     Monitorias/Estágios em andamento
+     Orientações ativas (para professores)
+     Editais publicados (para coordenadores)
+   - Configurações de Conta.
+3. O usuário navega entre as seções para ver detalhes.  
+
+### Pós-condições
+- O usuário pode verificar a precisão de suas informações cadastrais.  
+- O sistema registra o acesso ao perfil.  
+
+### Fluxo de Exceção
+- No passo 2, se os dados estiverem desatualizados:  
+  O sistema exibe alerta: "Algumas informações precisam ser atualizadas na secretaria."
+- No passo 2, se não houver atividades vinculadas:  
+  O sistema sugere: "Nenhuma atividade ativa. Clique para conhecer as opções disponíveis."
+
