@@ -18,20 +18,20 @@
 <h4>UC16. Solicitar Declaração de Participação Estágio
 <h4>UC17. Solicitar Declaração de Conclusão de Curso
 <h4>UC18. Consultar Histórico de Atividades
-<h4>UC19. Cadastrar Estágio (Aluno)
-<h4>UC20. Baixar documentos acadêmicos (Todos os atores do sistema)
-<h4>UC21. Acompanhar Orientações TCC (Professor) 
-<h4>UC22. Acompanhar Orientações Monitoria (Professor)
-<h4>UC23. Acompanhar Orientações Estágio (Professor)
+<h4>UC19. Cadastrar Estágio (Aluno) 
+<h4>UC20. Baixar documentos acadêmicos (Todos os atores do sistema) 
+<h4>UC21. Acompanhar Orientações TCC (Professor) - HUGO
+<h4>UC22. Acompanhar Orientações Monitoria (Professor) - HUGO
+<h4>UC23. Acompanhar Orientações Estágio (Professor) - HUGO
 <h4>UC24. Avaliar Relatório Final de Monitoria (Professor e Coordenador de Monitoria)
 <h4>UC25. Avaliar Relatório Final de Estágio (Professor e Coordenador de Estágio)
 <h4>UC26. Avaliar TCC (Professor)
 <h4>UC27. Avaliar Pedidos de Estágio (Coordenador de Estágio)
-<h4>UC28. Ofertar Orientação (Professor)
+<h4>UC28. Ofertar Orientação (Professor) - HUGO
 <h4>UC29. Cadastrar Edital de Monitoria (Coordenador de Monitoria)
-<h4>UC30. Acompanhar status estágio (Aluno, Coordenador de Estágio)
-<h4>UC31. Acompanhar status monitoria (Aluno, Coordenador de Monitoria)
-<h4>UC32. Consultar 'meu perfil' (Todos os atores cadastrados)</h4>
+<h4>UC30. Acompanhar status estágio (Aluno, Coordenador de Estágio) - HUGO
+<h4>UC31. Acompanhar status monitoria (Aluno, Coordenador de Monitoria) - HUGO
+<h4>UC32. Consultar 'meu perfil' (Todos os atores cadastrados) - HUGO </h4>
 
 ## UC1. Cadastrar Usuário
 
@@ -633,6 +633,7 @@ O usuário acessa o sistema para visualizar todo o histórico de suas atividades
 ## UC19. Cadastrar Estágio
 
 ### Cenário Informal:
+
 O caso começa quando um aluno precisa registrar um novo estágio no sistema para validação institucional.
 
 ### Atores
@@ -712,76 +713,92 @@ O caso começa quando um professor orientador deseja acompanhar o progresso dos 
 5. Registra novas observações
 
 ### Pós-condições
-- Observações ficam disponíveis para o aluno
-- Sistema atualiza status do TCC
+- As novas observações ficam disponíveis para o aluno orientado.
+- O sistema atualiza o status do progresso do TCC.
 
 ### Fluxo de Exceção
-- No passo 2, se não houver orientandos, o sistema sugere cadastro de disponibilidade
-- No passo 4, se houver atrasos, o sistema destaca em vermelho
+- EA1: Se no passo 2 não houver orientandos:
+   - O sistema exibe uma mensagem informando a ausência de orientandos.
+   - O sistema sugere que o professor cadastre disponibilidade para orientar novos alunos
+- EA2: Se no passo 4 houverem atrasos:
+   - O sistema destaca as informações de prazos em vermelho para alertar o professor.
 
 ## UC22. Acompanhar Orientações de Monitoria
 
 ### Cenário Informal:
-O caso começa quando um professor responsável deseja acompanhar o desempenho dos monitores sob sua supervisão. O sistema consolida todas as informações relevantes em um painel único.
+
+O professor responsável deseja acompanhar o desempenho dos monitores que estão sob sua supervisão. O sistema consolida todas as informações relevantes em um painel único.
 
 ### Atores
 - Professor
 
 ### Pré-condições
-- Ter sido designado como professor responsável por monitoria
+- Ter sido designado como professor responsável por, pelo menos, uma disciplina
 - Ter pelo menos um monitor ativo
 
 ### Fluxo de Eventos (caminho básico)
 1. O professor acessa "Monitorias > Acompanhamento"
 2. O sistema exibe lista de monitores vinculados
 3. Seleciona um monitor específico
-4. Visualiza:
+4. O sistema exibe:
    - Horas cumpridas
    - Relatórios entregues
    - Avaliações anteriores
    - Próximos prazos
 5. Registra feedback ou orientações
-6. O sistema notifica o monitor sobre as observações
 
 ### Pós-condições
 - O registro de acompanhamento é armazenado
 - O histórico da monitoria é atualizado
+- O sistema notifica o(s) monitor(es) sobre as observações
 
 ### Fluxo de Exceção
-- No passo 2, se não houver monitores ativos, o sistema sugere convocação de novos monitores
-- No passo 4, se houver atrasos críticos, o sistema alerta o coordenador automaticamente
+
+- EA1: No passo 2, se não houver monitores ativos:
+   - O sistema notifica o professor
+   - O sistema sugere convocação de novos monitores
+- EA2: No passo 4, se houver atrasos críticos:
+   - O sistema alerta automaticamente o coordenador de monitoria por e-mail ou notificação interna 
 
 ## UC23. Acompanhar Orientações de Estágio
 
 ### Cenário Informal:
-O caso começa quando um professor orientador precisa acompanhar o progresso dos estágios supervisionados sob sua responsabilidade.
+
+O professor orientador deseja acompanhar o progresso dos estagiários sob sua responsabilidade. O sistema oferece uma visão consolidada dos dados acadêmicos e avaliações de campo, permitindo intervenções e acompanhamento eficaz.
 
 ### Atores
 - Professor
 
 ### Pré-condições
-- Ter sido designado como orientador de estágio
-- Ter pelo menos um estagiário ativo
+- Ter sido designado como professor orientador de estágio
+- Ter pelo menos um estagiário ativo sob sua responsabilidade
 
 ### Fluxo de Eventos (caminho básico)
 1. O professor acessa "Estágios > Orientação"
 2. O sistema lista todos os estagiários vinculados
 3. Seleciona um estagiário específico
-4. Visualiza:
+4. O sistema exibe:
    - Plano de atividades
    - Relatórios entregues
    - Avaliações da empresa
    - Cumprimento de carga horária
 5. Preenche avaliação parcial ou final
-6. O sistema atualiza o status do estágio
 
 ### Pós-condições
-- A avaliação fica disponível para o estagiário e coordenador
-- O sistema calcula automaticamente o progresso total
+
+- As avaliações (parciais ou finais) ficam disponíveis para o estagiário e o coordenado
+- O sistema salva as avaliações e calcula automaticamente o progresso total do estágio
+- O estagiário é notificado das alterações feitas pelo professor
 
 ### Fluxo de Exceção
-- No passo 4, se detectar divergência na carga horária, o sistema sugere auditoria
-- No passo 5, se a avaliação for negativa, o sistema gera plano de correção automático
+
+- EA1: No passo 4, se houver divergência na carga horária:
+   - O sistema sugere auditoria
+   - O sistema notifica o coordenador de estágio e o aluno via email ou notificação interna
+
+- EA2: No passo 5, se a avaliação for negativa: 
+   - O sistema gera plano de correção automático
+   - O sistema notifica o coordenador de estágio e o estagiário via email ou notificação interna 
 
 ## UC24. Avaliar Relatório Final de Monitoria
 
@@ -926,7 +943,8 @@ O caso começa quando o coordenador de estágio precisa analisar e aprovar novas
 ## UC28. Ofertar Orientação
 
 ### Cenário Informal:
-O caso começa quando um professor deseja disponibilizar vagas para orientação de TCC ou estágios. O sistema publica a disponibilidade para os alunos interessados.
+
+Um professor deseja disponibilizar vagas para orientação de Trabalhos de Conclusão de Curso (TCC) ou estágios. O sistema permite que o docente configure requisitos e parâmetros da oferta, tornando-a visível a alunos qualificados e aptos a solicitá-la.
 
 ### Atores
 - Professor
@@ -937,24 +955,35 @@ O caso começa quando um professor deseja disponibilizar vagas para orientação
 
 ### Fluxo de Eventos (caminho básico)
 1. O professor acessa "Orientações > Ofertar"
-2. Seleciona tipo (TCC ou Estágio)
-3. Define:
+2. Seleciona tipo de orientação: TCC ou Estágio
+3. Define os parametros da oferta:
    - Áreas de interesse
    - Vagas disponíveis
    - Requisitos mínimos
    - Período de disponibilidade
 4. Publica a oferta
-5. O sistema lista na vitrine de orientações
 
 ### Pós-condições
-- A oferta fica visível para alunos qualificados
-- O professor recebe solicitações via sistema
+- A oferta torna-se visível apenas para alunos que atendam aos critérios definidos
+- O professor passa a receber solicitações de orientação por meio do sistema
+- A oferta do professor é listada na vitrine de orientações
 
 ### Fluxo de Exceção
-- No passo 3, se exceder carga horária máxima, o sistema ajusta automaticamente
-- No passo 4, se conflitar com período sabático, o sistema bloqueia publicação
 
-# UC29. Cadastrar Edital de Monitoria
+- EA1: No passo 1, caso o professor não tenha cadastro como orientador:
+   - O sistema notifica o professor com uma mensagem
+   - O sistema bloqueia a tentativa e retorna para a página de início
+
+- EA2: No passo 2, caso o professor tenha exceda o número máximo de orientandos da modalidade escolhida:
+   - O sistema notifica o professor com uma mensagem
+   - O sistema bloqueia a tentativa e retorna para a página de início
+
+- EA3: No passo 3, se houver extrapolamento da carga horária máxima:
+   - O sistema notifica o professor com uma mensagem
+   - O sistema impede a publicação da oferta
+
+
+## UC29. Cadastrar Edital de Monitoria
 
 ### Cenário Informal:
 O caso começa quando o Coordenador de Monitoria precisa criar um novo edital para seleção de monitores. O sistema oferece formulário padronizado com todos os elementos obrigatórios.
@@ -1005,6 +1034,7 @@ O caso começa quando o Coordenador de Monitoria precisa criar um novo edital pa
 ## UC30. Acompanhar Status de Estágio
 
 ### Cenário Informal:
+
 O caso começa quando um aluno estagiário ou coordenador de estágio acessa o sistema para verificar o andamento das atividades de estágio, incluindo progresso, pendências e avaliações.  
 
 ### Atores
@@ -1012,8 +1042,8 @@ O caso começa quando um aluno estagiário ou coordenador de estágio acessa o s
 - Coordenador de Estágio  
 
 ### Pré-condições
-- O estágio deve estar cadastrado e aprovado no sistema.  
-- O usuário deve ter permissões de acesso (aluno vinculado ao estágio ou coordenador responsável).  
+- O estágio deve estar cadastrado e aprovado no sistema
+- O usuário deve ter permissões de acesso (aluno vinculado ao estágio ou coordenador de estágio) 
 
 ### Fluxo de Eventos (caminho básico)
 1. O usuário acessa a seção "Estágios > Acompanhamento".  
@@ -1022,34 +1052,35 @@ O caso começa quando um aluno estagiário ou coordenador de estágio acessa o s
    - Relatórios entregues e seus status.  
    - Avaliações do orientador e da empresa (se aplicável).  
    - Próximos prazos importantes.  
-3. O usuário seleciona "Detalhes" para uma visão ampliada.  
-4. O sistema mostra:  
+3. O usuário seleciona "Detalhes".
+4. O sistema exibe:  
    - Feedback detalhado do orientador.  
    - Histórico completo de atividades.  
    - Documentos vinculados.  
 
 ### Pós-condições
-- O usuário tem uma visão clara do status atual do estágio.  
-- O sistema registra a consulta no histórico de acesso.  
+- O sistema registra a consulta no histórico de acesso do usuário.  
 
 ### Fluxo de Exceção
-- No passo 2, se o estágio não estiver cadastrado:  
-  O sistema exibe: "Nenhum estágio vinculado. Cadastre um estágio primeiro."
-- No passo 4, se houver dados inconsistentes:  
-  O sistema notifica a coordenação para verificação manual.
+- EA1: No passo 2, se o estágio não estiver cadastrado:  
+   - O sistema exibe notificação informando que não há estágio vinculado ao usuário
+- EA2: No passo 4, se houver dados inconsistentes: 
+   - O sistema exibe um alerta 
+   - O sistema notifica a coordenação para verificação manual.
 
 ## UC31. Acompanhar Status de Monitoria
 
 ### Cenário Informal:
-O caso começa quando um aluno ou coordenador deseja verificar o andamento atual das atividades de monitoria.
+
+O caso começa quando um monitor ou coordenador deseja verificar o andamento atual das atividades de monitoria.
 
 ### Atores
 - Aluno (Monitor)
 - Coordenador de Monitoria
 
 ### Pré-condições
-- Ter monitoria ativa no sistema
-
+- O usuário deve ter permissões de acesso (aluno vinculado a uma monitoria ou coordenador de estágio) 
+   
 ### Fluxo de Eventos (caminho básico)
 1. O usuário acessa "Monitoria > Andamento"
 2. O sistema exibe:
@@ -1057,21 +1088,27 @@ O caso começa quando um aluno ou coordenador deseja verificar o andamento atual
    - Próximas entregas
    - Pendências
    - Histórico de avaliações
-3. Seleciona item específico para detalhes
-4. O sistema mostra relatório completo
+3. O usuário seleciona item específico para visualizar os detalhes
+4. O sistema exibe um relatório completo do item selecionado
 
 ### Pós-condições
-- Registro de consulta no histórico
-- Atualização de alertas e notificações
+- O sistema registra a consulta no histórico de acessos
+- Alertas e notificações são atualizadas, se necessário
 
 ### Fluxo de Exceção
-- No passo 2, se houver irregularidades, o sistema destaca em vermelho
-- No passo 3, se o monitor estiver inativo, o sistema sugere substituição
+
+- EA1:No passo 2, se houver irregularidades:
+   - O sistema destaca em vermelho os itens irregulares
+
+- EA2:No passo 3, se o monitor estiver inativo:
+   - O sistema exibe um alerta ao monitor
+   - O sistema notifica o coordenador de monitoria 
 
 ## UC32. Consultar 'Meu Perfil'
 
 ### Cenário Informal:
-O caso começa quando qualquer usuário autenticado acessa o sistema para visualizar suas informações pessoais, acadêmicas e atividades vinculadas.  
+
+O caso começa um usuário autenticado acessa o sistema para visualizar suas informações pessoais, acadêmicas e atividades vinculadas.  
 
 ### Atores 
 - Aluno  
@@ -1091,7 +1128,7 @@ O caso começa quando qualquer usuário autenticado acessa o sistema para visual
    - Dados Pessoais: Nome, CPF, e-mail institucional.  
    - Informações Acadêmicas: Curso, matrícula, período (para alunos) ou departamento (para docentes).  
    - Atividades Vinculadas:
-     Monitorias/Estágios em andamento
+     Monitorias/Estágios em andamento (para alunos)
      Orientações ativas (para professores)
      Editais publicados (para coordenadores)
    - Configurações de Conta.
@@ -1102,8 +1139,8 @@ O caso começa quando qualquer usuário autenticado acessa o sistema para visual
 - O sistema registra o acesso ao perfil.  
 
 ### Fluxo de Exceção
-- No passo 2, se os dados estiverem desatualizados:  
-  O sistema exibe alerta: "Algumas informações precisam ser atualizadas na secretaria."
-- No passo 2, se não houver atividades vinculadas:  
-  O sistema sugere: "Nenhuma atividade ativa. Clique para conhecer as opções disponíveis."
+- EA1: No passo 2, se os dados estiverem desatualizados:  
+   - O sistema notifica o usuário sobre a necessidade de atualização dos dados 
+- EA2: No passo 2, se não houver atividades vinculadas:  
+   - O sistema recomenda as atividades disponíveis de acordo com as permissões do usuário 
 
