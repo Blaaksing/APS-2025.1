@@ -20,18 +20,18 @@
 <h4>UC18. Consultar Histórico de Atividades
 <h4>UC19. Cadastrar Estágio (Aluno) 
 <h4>UC20. Baixar documentos acadêmicos (Todos os atores do sistema) 
-<h4>UC21. Acompanhar Orientações TCC (Professor) - HUGO
-<h4>UC22. Acompanhar Orientações Monitoria (Professor) - HUGO
-<h4>UC23. Acompanhar Orientações Estágio (Professor) - HUGO
+<h4>UC21. Acompanhar Orientações TCC (Professor)
+<h4>UC22. Acompanhar Orientações Monitoria (Professor)
+<h4>UC23. Acompanhar Orientações Estágio (Professor)
 <h4>UC24. Avaliar Relatório Final de Monitoria (Professor e Coordenador de Monitoria)
 <h4>UC25. Avaliar Relatório Final de Estágio (Professor e Coordenador de Estágio)
 <h4>UC26. Avaliar TCC (Professor)
 <h4>UC27. Avaliar Pedidos de Estágio (Coordenador de Estágio)
-<h4>UC28. Ofertar Orientação (Professor) - HUGO
+<h4>UC28. Ofertar Orientação (Professor)
 <h4>UC29. Cadastrar Edital de Monitoria (Coordenador de Monitoria)
-<h4>UC30. Acompanhar status estágio (Aluno, Coordenador de Estágio) - HUGO
-<h4>UC31. Acompanhar status monitoria (Aluno, Coordenador de Monitoria) - HUGO
-<h4>UC32. Consultar 'meu perfil' (Todos os atores cadastrados) - HUGO </h4>
+<h4>UC30. Acompanhar status estágio (Aluno, Coordenador de Estágio)
+<h4>UC31. Acompanhar status monitoria (Aluno, Coordenador de Monitoria)
+<h4>UC32. Consultar 'meu perfil' (Todos os atores cadastrados) </h4>
 
 ## UC1. Cadastrar Usuário
 
