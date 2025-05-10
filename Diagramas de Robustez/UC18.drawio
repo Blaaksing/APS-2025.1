@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="25.0.3">
+  <diagram name="Página-1" id="_t-elR2FZ1PvIVDdp2nf">
+    <mxGraphModel dx="1425" dy="1198" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Urz3zBzDtukTJrbocMOn-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-1" target="Urz3zBzDtukTJrbocMOn-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-1" value="Ator Cadastrado no SITEM" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="246" y="-60" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-2" target="Urz3zBzDtukTJrbocMOn-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-2" value="Tela Histórico de Atividades" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="403" y="-74.5" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-3" value="Estágio" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="808" y="-72" width="89" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-10" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-4" target="Urz3zBzDtukTJrbocMOn-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-4" value="Controlador Histórico de Atividades" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="619" y="-79.25" width="94" height="104.5" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-22" value="ProjetoTCC" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="808" y="-252" width="89" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-24" value="Atividade Monitoria" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="808" y="108" width="89" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-25" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.102;entryY=0.854;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-4" target="Urz3zBzDtukTJrbocMOn-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-26" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.04;entryY=0.295;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-4" target="Urz3zBzDtukTJrbocMOn-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="25.0.3">
+  <diagram name="Página-1" id="_t-elR2FZ1PvIVDdp2nf">
+    <mxGraphModel dx="984" dy="951" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Urz3zBzDtukTJrbocMOn-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-1" target="Urz3zBzDtukTJrbocMOn-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-1" value="Aluno&lt;div&gt;Professor&lt;/div&gt;&lt;div&gt;Monitor&lt;/div&gt;&lt;div&gt;Autor de TCC&lt;/div&gt;&lt;div&gt;Estagiário&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="246" y="-60" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-9" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-2" target="Urz3zBzDtukTJrbocMOn-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-2" value="Tela Receber Documento" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="412" y="-67" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-11" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-3" target="Urz3zBzDtukTJrbocMOn-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-3" target="Urz3zBzDtukTJrbocMOn-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-3" target="Urz3zBzDtukTJrbocMOn-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-3" value="Documento" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="808" y="-67" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-10" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="Urz3zBzDtukTJrbocMOn-4" target="Urz3zBzDtukTJrbocMOn-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-4" value="Controlador Receber Documento" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="627" y="-74.5" width="86" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-5" value="DocEstagio" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="972" y="-70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-12" value="DocMonitoria" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="972" y="-270" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Urz3zBzDtukTJrbocMOn-14" value="DocTCC" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="972" y="130" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
