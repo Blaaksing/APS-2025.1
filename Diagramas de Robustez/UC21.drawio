@@ -4,13 +4,13 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-1" value="Tela Orientações" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-1" value="Tela Orientações" style="shape=umlBoundary;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="194" y="280" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-2" value="Tela TCC" style="shape=umlBoundary;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-2" value="Tela TCC" style="shape=umlBoundary;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="370" y="280" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="gaGNtvpcsFK7BEW2B4qQ-1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-4" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="gaGNtvpcsFK7BEW2B4qQ-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="310" y="319.71" as="sourcePoint" />
             <mxPoint x="370" y="320" as="targetPoint" />
@@ -19,19 +19,19 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-5" value="Professor&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-5" value="Professor&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="290" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-8" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="81" y="319.58" as="sourcePoint" />
             <mxPoint x="194" y="319.58" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-9" value="Controlador TCC" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-9" value="Controlador TCC" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="550" y="270" width="80" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-10" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="470" y="319.7" as="sourcePoint" />
             <mxPoint x="550" y="320" as="targetPoint" />
@@ -40,22 +40,31 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-11" value="Orientandos" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-11" value="Orientandos" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="280" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-12" value="Informações" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-12" value="Informações" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="120" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="gaGNtvpcsFK7BEW2B4qQ-11">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="gaGNtvpcsFK7BEW2B4qQ-11" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="631" y="320" as="sourcePoint" />
             <mxPoint x="710" y="320" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gaGNtvpcsFK7BEW2B4qQ-11" target="gaGNtvpcsFK7BEW2B4qQ-12">
+        <mxCell id="gaGNtvpcsFK7BEW2B4qQ-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="gaGNtvpcsFK7BEW2B4qQ-11" target="gaGNtvpcsFK7BEW2B4qQ-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="589.5" y="119.99999999999997" as="sourcePoint" />
             <mxPoint x="589.5" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wuOqxcXgKOrbN4r6pfJk-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.625;entryY=0.111;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="gaGNtvpcsFK7BEW2B4qQ-12" target="gaGNtvpcsFK7BEW2B4qQ-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="170" as="sourcePoint" />
+            <mxPoint x="680" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="160" />
+            </Array>
           </mxGeometry>
         </mxCell>
       </root>
